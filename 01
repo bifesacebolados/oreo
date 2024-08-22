@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Função para calcular o fatorial de um número
+unsigned long long fatorial(int n) {
+    // Inicializa o resultado como 1, pois 0! = 1! = 1
+    unsigned long long resultado = 1;
+
+    // Calcula o fatorial multiplicando os números de n até 1
+    for (int i = n; i > 1; i--) {
+        resultado *= i;
+    }
+
+    return resultado;
+}
+
+int main() {
+    int n;
+
+    // Solicita ao usuário que insira um número inteiro
+    cout << "Digite um número inteiro maior ou igual a zero: ";
+    cin >> n;
+
+    // Verifica se o número é maior ou igual a zero
+    if (n < 0) {
+        cout << "Número inválido. Por favor, insira um número maior ou igual a zero." << endl;
+    } else {
+        // Chama a função fatorial e imprime o resultado
+        cout << "O fatorial de " << n << " é: " << fatorial(n) << endl;
+    }
+
+    return 0;
+}
