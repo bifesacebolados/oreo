@@ -1,0 +1,5 @@
+potencia (float x, unsigned int y){
+float result=1;
+for (unsigned i=1; i<= y; i++)
+result=result*x;
+return result;
