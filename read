@@ -1,11 +1,25 @@
-# Laboratórios de POO
+ Sistema de controle de versão
 
-> Repositórios com os laboratórios da disciplina de Programação Orientada a Objetos do curso de ADS do IFSC - São José.
+## Configuração inicial para uso do Git
+Configure seu nome e email para identificar o autor dos commits
+```bash
+git config --global user.name "Victor Gabriel"
+git config --global user.email "lacerd74@gmail.com"
+```
 
-### Victor Gabriel de Souza Lacerda Belém
+## Criando Personal Access Token (PAT) no GitHub
 
-#### Laboratórios
+> GitHub não aceita mais autenticação via senha, então preciso fazer o acesso via token.
 
-- [Laboratório 01](/lab-01) - Sistema de Controle de Versão
+1. Acesse https://github.com/settings/tokens
+2. Marque a permissão repo
 
-![MIT](https://img.shields.io/badge/MIT-_License-green)
+## Salvar em cache as credenciais do PAT
+Para não ter que digitar o token a cada operação via linha de comando, é
+possível usar o credential helper do git
+
+```bash
+git config --global credential.helper cache
+# Caso queira armazenar por mais tempo, use (irá armazenar por 1 hora)
+git config −−global credential.helper 'cache −−timeout=3600'
+```
